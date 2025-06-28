@@ -65,7 +65,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--brand-purple))]/80 to-transparent" />
@@ -73,7 +73,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <Badge className="mb-4 bg-red-600 text-white">⚠️ Limited Time: 15% Off All Services</Badge>
+              <Badge className="mb-4 bg-[#300954] text-white">⚠️ Limited Time: 15% Off All Services</Badge>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Professional Painting & Restoration Experts
               </h1>
@@ -87,7 +87,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   size="lg" 
-                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                  className="bg-[#300954] hover:bg-[#300954]/90 text-white px-8 py-4 text-lg"
                   onClick={() => scrollToSection('contact')}
                 >
                   Get Free Quote Now <ArrowRight className="ml-2" />
@@ -165,7 +165,7 @@ const Index = () => {
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows={3}
                   />
-                  <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg">
+                  <Button type="submit" className="w-full bg-[#300954] hover:bg-[#300954]/90 text-white py-3 text-lg">
                     Get My Free Quote Now
                   </Button>
                   <p className="text-xs text-center text-gray-500">
@@ -333,7 +333,7 @@ const Index = () => {
       </section>
 
       {/* Limited Time Offer */}
-      <section className="py-20 bg-red-600 text-white">
+      <section className="py-20 bg-[#300954] text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <Clock className="mx-auto mb-6 text-6xl" />
@@ -348,7 +348,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-white text-red-600 hover:bg-gray-100 px-12 py-4 text-xl"
+              className="bg-white text-[#300954] hover:bg-gray-100 px-12 py-4 text-xl"
               onClick={() => scrollToSection('contact')}
             >
               Claim Your 15% Discount Now
@@ -453,7 +453,7 @@ const Index = () => {
                     <option value="residential">Residential Painting</option>
                   </select>
                   <Textarea placeholder="Tell us about your project..." rows={4} />
-                  <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg">
+                  <Button type="submit" className="w-full bg-[#300954] hover:bg-[#300954]/90 text-white py-3 text-lg">
                     Get My Free Quote - Save 15%
                   </Button>
                 </form>
@@ -486,7 +486,7 @@ const Index = () => {
       </footer>
 
       {/* Mobile Sticky CTA */}
-      <div className={`fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white p-4 transform transition-transform md:hidden ${
+      <div className={`fixed bottom-0 left-0 right-0 z-50 bg-[#300954] text-white p-4 transform transition-transform md:hidden ${
         showMobileCTA ? 'translate-y-0' : 'translate-y-full'
       }`}>
         <div className="flex items-center justify-between">
@@ -495,7 +495,7 @@ const Index = () => {
             <div className="text-sm opacity-90">Limited time offer</div>
           </div>
           <Button 
-            className="bg-white text-red-600 hover:bg-gray-100 font-bold"
+            className="bg-white text-[#300954] hover:bg-gray-100 font-bold"
             onClick={() => scrollToSection('contact')}
           >
             Get Quote Now
