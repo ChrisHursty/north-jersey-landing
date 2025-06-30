@@ -7,6 +7,15 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Phone, Mail, MapPin, Clock, Shield, Award, Users, CheckCircle, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 const Index = () => {
+  interface ThemeSettings {
+    tagline?: string;
+    phone?: string;
+  }
+  const globalSettings = (window as unknown as { njspecialistsSettings?: ThemeSettings }).njspecialistsSettings;
+  const settings: ThemeSettings = globalSettings || {};
+  const tagline = settings.tagline || "Professional Painting & Restoration Experts";
+  const phoneNumber = settings.phone || "973-927-1616";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -75,7 +84,7 @@ const Index = () => {
             <div className="text-white">
               <Badge className="mb-4 bg-[#300954] text-white">⚠️ Limited Time: 15% Off All Services</Badge>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Professional Painting & Restoration Experts
+                {tagline}
               </h1>
               <p className="text-xl mb-4 text-gray-200">
                 "Need repairs, Build it, Fix it with The Efficient Handyman way."
@@ -89,7 +98,7 @@ const Index = () => {
                   Get Free Quote Now <ArrowRight className="ml-2" />
                 </Button>
                 <Button variant="outline" size="lg" className="border-white hover:bg-white hover:text-[hsl(var(--brand-purple))] px-8 py-4 text-lg text-violet-950">
-                  <Phone className="mr-2" /> Call: 973-927-1616
+                  <Phone className="mr-2" /> Call: {phoneNumber}
                 </Button>
               </div>
 
@@ -399,7 +408,7 @@ const Index = () => {
                   <Phone className="mr-4 text-[hsl(var(--brand-cream))]" />
                   <div>
                     <div className="font-semibold">Call Us Today</div>
-                    <div>973-927-1616 or 973-229-9787</div>
+                    <div>{phoneNumber} or 973-229-9787</div>
                   </div>
                 </div>
                 <div className="flex items-center">
